@@ -1,4 +1,5 @@
 import { Component, inject, signal } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { TranslationService, TranslationKey } from '../../i18n';
 import { GeneratedExam } from '../../models';
 import { ExamStorageService } from '../../services';
@@ -7,7 +8,7 @@ import { ExamCardComponent } from './components/exam-card/exam-card.component';
 
 @Component({
   selector: 'app-exams-list',
-  imports: [EmptyStateComponent, ExamCardComponent],
+  imports: [EmptyStateComponent, ExamCardComponent, RouterLink],
   templateUrl: './exams-list.component.html',
   styleUrl: './exams-list.component.scss',
 })

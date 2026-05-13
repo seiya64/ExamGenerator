@@ -1,4 +1,5 @@
 import { TestBed } from '@angular/core/testing';
+import { provideRouter } from '@angular/router';
 import { GeneratedExam } from '../../models';
 import { ExamStorageService } from '../../services';
 import { ExamsListComponent } from './exams-list.component';
@@ -9,6 +10,7 @@ describe('ExamsListComponent', () => {
 
     await TestBed.configureTestingModule({
       imports: [ExamsListComponent],
+      providers: [provideRouter([])],
     }).compileComponents();
   });
 
@@ -19,7 +21,7 @@ describe('ExamsListComponent', () => {
 
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.textContent).toContain('No hay');
-    expect(compiled.querySelector('.btn-primary')?.hasAttribute('disabled')).toBe(true);
+    expect(compiled.querySelector('.btn-primary')?.getAttribute('href')).toBe('/exams/new');
   });
 
   it('should render saved exams as cards', () => {

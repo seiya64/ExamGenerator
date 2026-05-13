@@ -5,9 +5,9 @@
     <p class="mb-0 text-secondary">{{ t('exams.listBody') }}</p>
   </div>
 
-  <button type="button" class="btn btn-primary" disabled>
+  <a class="btn btn-primary" routerLink="/exams/new">
     {{ t('exams.createAction') }}
-  </button>
+  </a>
 </header>
 
 @if (exams().length === 0) {

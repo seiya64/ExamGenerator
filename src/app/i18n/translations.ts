@@ -17,6 +17,9 @@ export type TranslationKey =
   | 'exams.createAction'
   | 'exams.openExam'
   | 'exams.deleteExam'
+  | 'create.placeholderEyebrow'
+  | 'create.placeholderTitle'
+  | 'create.placeholderBody'
   | 'exam.defaultQuestionName';
 
 export const DEFAULT_LANGUAGE: LanguageCode = 'es';
@@ -40,6 +43,9 @@ export const TRANSLATIONS: Record<LanguageCode, Record<TranslationKey, string>> 
     'exams.createAction': 'Crear examen',
     'exams.openExam': 'Abrir examen',
     'exams.deleteExam': 'Eliminar examen',
+    'create.placeholderEyebrow': 'Ruta /exams/new',
+    'create.placeholderTitle': 'Crear examen',
+    'create.placeholderBody': 'Esta pantalla contendrá el formulario para generar un nuevo examen.',
     'exam.defaultQuestionName': 'Ejercicio',
   },
   en: {
@@ -60,6 +66,9 @@ export const TRANSLATIONS: Record<LanguageCode, Record<TranslationKey, string>> 
     'exams.createAction': 'Create exam',
     'exams.openExam': 'Open exam',
     'exams.deleteExam': 'Delete exam',
+    'create.placeholderEyebrow': 'Route /exams/new',
+    'create.placeholderTitle': 'Create exam',
+    'create.placeholderBody': 'This screen will contain the form for generating a new exam.',
     'exam.defaultQuestionName': 'Exercise',
   },
 };
