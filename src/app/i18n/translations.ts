@@ -36,6 +36,8 @@ export type TranslationKey =
   | 'detail.placeholderEyebrow'
   | 'detail.placeholderTitle'
   | 'detail.placeholderBody'
+  | 'detail.questionLabel'
+  | 'detail.exerciseTypeLabel'
   | 'exam.defaultQuestionName';
 
 export const DEFAULT_LANGUAGE: LanguageCode = 'es';
@@ -78,6 +80,8 @@ export const TRANSLATIONS: Record<LanguageCode, Record<TranslationKey, string>> 
     'detail.placeholderEyebrow': 'Ruta /exams/:id',
     'detail.placeholderTitle': 'Detalle del examen',
     'detail.placeholderBody': 'Esta pantalla mostrará el examen generado en modo solo lectura.',
+    'detail.questionLabel': 'Pregunta',
+    'detail.exerciseTypeLabel': 'Tipo',
     'exam.defaultQuestionName': 'Ejercicio',
   },
   en: {
@@ -117,6 +121,8 @@ export const TRANSLATIONS: Record<LanguageCode, Record<TranslationKey, string>> 
     'detail.placeholderEyebrow': 'Route /exams/:id',
     'detail.placeholderTitle': 'Exam detail',
     'detail.placeholderBody': 'This screen will show the generated exam in read-only mode.',
+    'detail.questionLabel': 'Question',
+    'detail.exerciseTypeLabel': 'Type',
     'exam.defaultQuestionName': 'Exercise',
   },
 };

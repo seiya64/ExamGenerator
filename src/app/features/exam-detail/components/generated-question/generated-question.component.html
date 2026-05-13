@@ -1,0 +1,15 @@
+<article class="generated-question">
+  <header class="generated-question__header">
+    <p class="generated-question__eyebrow mb-2">
+      {{ t('detail.questionLabel') }} {{ questionNumber() }}
+    </p>
+    <h2 class="h5 mb-0">{{ question().name }}</h2>
+  </header>
+
+  <p class="generated-question__type mb-0">
+    <span>{{ t('detail.exerciseTypeLabel') }}:</span>
+    {{ exerciseTypeLabel() }}
+  </p>
+
+  <p class="generated-question__text mb-0">{{ exerciseText() }}</p>
+</article>
