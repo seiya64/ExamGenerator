@@ -27,26 +27,6 @@
   font-weight: 700;
 }
 
-.language-switcher {
-  display: inline-flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.status-panel {
-  padding: 1.5rem;
-  border: 1px solid #dfe4ef;
-  border-radius: 0.5rem;
-  background: #ffffff;
-}
-
-.status-eyebrow {
-  color: #315f9d;
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
 @media (min-width: 576px) {
   .app-header-inner {
     flex-direction: row;

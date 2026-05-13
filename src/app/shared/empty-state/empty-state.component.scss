@@ -1,0 +1,17 @@
+.empty-state {
+  padding: 1.5rem;
+  border: 1px solid #dfe4ef;
+  border-radius: 0.5rem;
+  background: #ffffff;
+}
+
+.empty-state__eyebrow {
+  color: #315f9d;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.empty-state__body {
+  max-width: 42rem;
+}

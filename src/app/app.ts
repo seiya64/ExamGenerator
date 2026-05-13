@@ -1,20 +1,16 @@
 import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { LanguageCode, TranslationService, TranslationKey } from './i18n';
+import { TranslationService, TranslationKey } from './i18n';
+import { EmptyStateComponent, LanguageSwitcherComponent } from './shared';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, EmptyStateComponent, LanguageSwitcherComponent],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
 export class App {
   private readonly translationService = inject(TranslationService);
-  protected readonly language = this.translationService.language;
-
-  protected setLanguage(language: LanguageCode): void {
-    this.translationService.setLanguage(language);
-  }
 
   protected t(key: TranslationKey): string {
     return this.translationService.translate(key);

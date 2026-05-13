@@ -1,0 +1,20 @@
+<div class="language-switcher" role="group" [attr.aria-label]="t('shell.languageLabel')">
+  <button
+    type="button"
+    class="btn btn-sm"
+    [class.btn-primary]="language() === 'es'"
+    [class.btn-outline-primary]="language() !== 'es'"
+    (click)="setLanguage('es')"
+  >
+    {{ t('shell.spanish') }}
+  </button>
+  <button
+    type="button"
+    class="btn btn-sm"
+    [class.btn-primary]="language() === 'en'"
+    [class.btn-outline-primary]="language() !== 'en'"
+    (click)="setLanguage('en')"
+  >
+    {{ t('shell.english') }}
+  </button>
+</div>

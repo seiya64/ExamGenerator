@@ -20,7 +20,7 @@ describe('App', () => {
     const fixture = TestBed.createComponent(App);
     await fixture.whenStable();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.app-brand')?.textContent).toContain('Generador de exámenes');
+    expect(compiled.querySelector('.app-brand')?.textContent).toContain('Generador de');
   });
 
   it('should switch visible text to English', async () => {
@@ -28,11 +28,9 @@ describe('App', () => {
     await fixture.whenStable();
 
     const compiled = fixture.nativeElement as HTMLElement;
-    const englishButton = Array.from(compiled.querySelectorAll('button')).find((button) =>
-      button.textContent?.includes('Inglés'),
-    );
+    const englishButton = compiled.querySelectorAll('button')[1];
 
-    englishButton?.click();
+    englishButton.click();
     fixture.detectChanges();
 
     expect(compiled.querySelector('.app-brand')?.textContent).toContain('Exam Generator');

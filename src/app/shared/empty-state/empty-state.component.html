@@ -1,0 +1,17 @@
+<section class="empty-state" aria-labelledby="empty-state-title">
+  @if (eyebrow()) {
+    <p class="empty-state__eyebrow mb-2">{{ eyebrow() }}</p>
+  }
+
+  <h1 id="empty-state-title" class="h3 mb-2">{{ title() }}</h1>
+
+  @if (body()) {
+    <p class="empty-state__body mb-0 text-secondary">{{ body() }}</p>
+  }
+
+  @if (actionLabel()) {
+    <button type="button" class="btn btn-primary mt-3" (click)="onAction()">
+      {{ actionLabel() }}
+    </button>
+  }
+</section>
