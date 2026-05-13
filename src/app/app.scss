@@ -1,0 +1,22 @@
+:host {
+  display: block;
+  min-height: 100vh;
+}
+
+.app-start {
+  display: grid;
+  min-height: 100vh;
+  place-content: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.app-start h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.app-start p {
+  margin: 0.75rem 0 0;
+  color: #555;
+}
