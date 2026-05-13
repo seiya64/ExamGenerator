@@ -85,6 +85,22 @@ describe('ExamsListComponent', () => {
     expect(remainingExams[0].name).toBe('Final algebra');
     expect((fixture.nativeElement as HTMLElement).textContent).not.toContain('Geometry review');
   });
+
+  it('should return to the empty state after deleting the final exam', async () => {
+    const storage = TestBed.inject(ExamStorageService);
+    storage.save(createExam());
+    modalService.open.mockReturnValue(createModalRef(true));
+    const fixture = TestBed.createComponent(ExamsListComponent);
+
+    fixture.detectChanges();
+    clickDelete(fixture);
+    await Promise.resolve();
+    fixture.detectChanges();
+
+    expect(storage.loadAll()).toEqual([]);
+    expect((fixture.nativeElement as HTMLElement).textContent).toContain('No hay');
+    expect(fixture.nativeElement.querySelector('app-exam-card')).toBeNull();
+  });
 });
 
 function createExam(id = 'exam_1', name = 'Final algebra'): GeneratedExam {

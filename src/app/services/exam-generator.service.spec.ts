@@ -51,6 +51,22 @@ describe('ExamGeneratorService', () => {
     expect(new Set(exerciseIds).size).toBe(exerciseIds.length);
   });
 
+  it('should reuse matching exercises only after the available pool is exhausted', () => {
+    const exam = service.generate('Large matrix exam', [
+      createQuestion('', 'matrix'),
+      createQuestion('', 'matrix'),
+      createQuestion('', 'matrix'),
+      createQuestion('', 'matrix'),
+      createQuestion('', 'matrix'),
+    ]);
+
+    const exerciseIds = exam.questions.map((question) => question.exerciseId);
+
+    expect(exerciseIds).toHaveLength(5);
+    expect(new Set(exerciseIds).size).toBe(4);
+    expect(exam.questions.every((question) => question.type === 'matrix')).toBe(true);
+  });
+
   it('should fall back to localized default question names', () => {
     const exam = service.generate('Defaults', [
       createQuestion('', 'ecuations'),

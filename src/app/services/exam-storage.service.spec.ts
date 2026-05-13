@@ -27,6 +27,12 @@ describe('ExamStorageService', () => {
     expect(service.loadById('exam_1')).toEqual(exam);
   });
 
+  it('should return undefined when loading a missing exam id', () => {
+    service.save(createExam('exam_1', 'Algebra'));
+
+    expect(service.loadById('missing')).toBeUndefined();
+  });
+
   it('should replace an existing exam with the same id', () => {
     service.save(createExam('exam_1', 'Original'));
     service.save(createExam('exam_1', 'Updated'));
@@ -43,6 +49,15 @@ describe('ExamStorageService', () => {
     service.deleteById('exam_1');
 
     expect(service.loadAll()).toEqual([secondExam]);
+  });
+
+  it('should leave stored exams unchanged when deleting an unknown id', () => {
+    const exam = createExam('exam_1', 'Algebra');
+    service.save(exam);
+
+    service.deleteById('missing');
+
+    expect(service.loadAll()).toEqual([exam]);
   });
 
   it('should return an empty list for invalid JSON', () => {
