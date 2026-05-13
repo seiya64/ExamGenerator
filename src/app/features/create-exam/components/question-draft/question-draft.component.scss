@@ -1,0 +1,19 @@
+.question-draft {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid #dfe4ef;
+  border-radius: 0.5rem;
+  background: #ffffff;
+}
+
+.question-draft__fields {
+  min-width: 0;
+}
+
+@media (min-width: 768px) {
+  .question-draft {
+    grid-template-columns: minmax(0, 1fr) minmax(14rem, 18rem) auto;
+    align-items: end;
+  }
+}

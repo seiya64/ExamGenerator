@@ -1,0 +1,42 @@
+<section class="question-draft">
+  <div class="question-draft__fields">
+    <label class="form-label" [for]="'question-name-' + index()">
+      {{ t('create.questionNameLabel') }}
+    </label>
+    <input
+      class="form-control"
+      [id]="'question-name-' + index()"
+      type="text"
+      [value]="draft().name"
+      [placeholder]="defaultNamePlaceholder()"
+      (input)="onNameChange($event)"
+    />
+  </div>
+
+  <div class="question-draft__fields">
+    <label class="form-label" [for]="'question-type-' + index()">
+      {{ t('create.questionTypeLabel') }}
+    </label>
+    <select
+      class="form-select"
+      [class.is-invalid]="shouldShowTypeError()"
+      [id]="'question-type-' + index()"
+      [value]="draft().type"
+      (change)="onTypeChange($event)"
+    >
+      <option value="">{{ t('create.questionTypePlaceholder') }}</option>
+      @for (type of exerciseTypes(); track type.id) {
+        <option [value]="type.id">{{ typeLabel(type) }}</option>
+      }
+    </select>
+    @if (shouldShowTypeError()) {
+      <div class="invalid-feedback">{{ t('create.questionTypeRequired') }}</div>
+    }
+  </div>
+
+  @if (canRemove()) {
+    <button type="button" class="btn btn-outline-danger" (click)="onRemove()">
+      {{ t('create.removeQuestion') }}
+    </button>
+  }
+</section>

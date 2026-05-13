@@ -20,6 +20,11 @@ export type TranslationKey =
   | 'create.placeholderEyebrow'
   | 'create.placeholderTitle'
   | 'create.placeholderBody'
+  | 'create.questionNameLabel'
+  | 'create.questionTypeLabel'
+  | 'create.questionTypePlaceholder'
+  | 'create.questionTypeRequired'
+  | 'create.removeQuestion'
   | 'exam.defaultQuestionName';
 
 export const DEFAULT_LANGUAGE: LanguageCode = 'es';
@@ -46,6 +51,11 @@ export const TRANSLATIONS: Record<LanguageCode, Record<TranslationKey, string>> 
     'create.placeholderEyebrow': 'Ruta /exams/new',
     'create.placeholderTitle': 'Crear examen',
     'create.placeholderBody': 'Esta pantalla contendrá el formulario para generar un nuevo examen.',
+    'create.questionNameLabel': 'Nombre de la pregunta',
+    'create.questionTypeLabel': 'Tipo de ejercicio',
+    'create.questionTypePlaceholder': 'Selecciona un tipo',
+    'create.questionTypeRequired': 'Selecciona un tipo de ejercicio.',
+    'create.removeQuestion': 'Eliminar pregunta',
     'exam.defaultQuestionName': 'Ejercicio',
   },
   en: {
@@ -69,6 +79,11 @@ export const TRANSLATIONS: Record<LanguageCode, Record<TranslationKey, string>> 
     'create.placeholderEyebrow': 'Route /exams/new',
     'create.placeholderTitle': 'Create exam',
     'create.placeholderBody': 'This screen will contain the form for generating a new exam.',
+    'create.questionNameLabel': 'Question name',
+    'create.questionTypeLabel': 'Exercise type',
+    'create.questionTypePlaceholder': 'Select a type',
+    'create.questionTypeRequired': 'Select an exercise type.',
+    'create.removeQuestion': 'Remove question',
     'exam.defaultQuestionName': 'Exercise',
   },
 };
