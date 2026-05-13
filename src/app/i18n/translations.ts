@@ -17,9 +17,17 @@ export type TranslationKey =
   | 'exams.createAction'
   | 'exams.openExam'
   | 'exams.deleteExam'
-  | 'create.placeholderEyebrow'
-  | 'create.placeholderTitle'
-  | 'create.placeholderBody'
+  | 'create.eyebrow'
+  | 'create.title'
+  | 'create.body'
+  | 'create.examNameLabel'
+  | 'create.examNamePlaceholder'
+  | 'create.examNameRequired'
+  | 'create.questionsTitle'
+  | 'create.questionsBody'
+  | 'create.addQuestion'
+  | 'create.minimumQuestionsRequired'
+  | 'create.generateAction'
   | 'create.questionNameLabel'
   | 'create.questionTypeLabel'
   | 'create.questionTypePlaceholder'
@@ -48,9 +56,17 @@ export const TRANSLATIONS: Record<LanguageCode, Record<TranslationKey, string>> 
     'exams.createAction': 'Crear examen',
     'exams.openExam': 'Abrir examen',
     'exams.deleteExam': 'Eliminar examen',
-    'create.placeholderEyebrow': 'Ruta /exams/new',
-    'create.placeholderTitle': 'Crear examen',
-    'create.placeholderBody': 'Esta pantalla contendrá el formulario para generar un nuevo examen.',
+    'create.eyebrow': 'Nuevo examen',
+    'create.title': 'Crear examen',
+    'create.body': 'Configura las preguntas y genera un examen con ejercicios aleatorios.',
+    'create.examNameLabel': 'Nombre del examen',
+    'create.examNamePlaceholder': 'Por ejemplo: Examen de álgebra',
+    'create.examNameRequired': 'El nombre del examen es obligatorio.',
+    'create.questionsTitle': 'Preguntas',
+    'create.questionsBody': 'Añade al menos dos preguntas y selecciona un tipo para cada una.',
+    'create.addQuestion': 'Añadir pregunta',
+    'create.minimumQuestionsRequired': 'Añade al menos dos preguntas.',
+    'create.generateAction': 'Generar examen',
     'create.questionNameLabel': 'Nombre de la pregunta',
     'create.questionTypeLabel': 'Tipo de ejercicio',
     'create.questionTypePlaceholder': 'Selecciona un tipo',
@@ -76,9 +92,17 @@ export const TRANSLATIONS: Record<LanguageCode, Record<TranslationKey, string>> 
     'exams.createAction': 'Create exam',
     'exams.openExam': 'Open exam',
     'exams.deleteExam': 'Delete exam',
-    'create.placeholderEyebrow': 'Route /exams/new',
-    'create.placeholderTitle': 'Create exam',
-    'create.placeholderBody': 'This screen will contain the form for generating a new exam.',
+    'create.eyebrow': 'New exam',
+    'create.title': 'Create exam',
+    'create.body': 'Configure the questions and generate an exam with random exercises.',
+    'create.examNameLabel': 'Exam name',
+    'create.examNamePlaceholder': 'For example: Algebra exam',
+    'create.examNameRequired': 'The exam name is required.',
+    'create.questionsTitle': 'Questions',
+    'create.questionsBody': 'Add at least two questions and select a type for each one.',
+    'create.addQuestion': 'Add question',
+    'create.minimumQuestionsRequired': 'Add at least two questions.',
+    'create.generateAction': 'Generate exam',
     'create.questionNameLabel': 'Question name',
     'create.questionTypeLabel': 'Exercise type',
     'create.questionTypePlaceholder': 'Select a type',

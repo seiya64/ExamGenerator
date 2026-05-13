@@ -1,0 +1,62 @@
+<form class="create-exam" (submit)="submit($event)" novalidate>
+  <header class="create-exam__header">
+    <div>
+      <p class="create-exam__eyebrow mb-2">{{ t('create.eyebrow') }}</p>
+      <h1 class="h3 mb-2">{{ t('create.title') }}</h1>
+      <p class="mb-0 text-secondary">{{ t('create.body') }}</p>
+    </div>
+  </header>
+
+  <section class="create-exam__panel">
+    <label class="form-label" for="exam-name">{{ t('create.examNameLabel') }}</label>
+    <input
+      id="exam-name"
+      class="form-control"
+      [class.is-invalid]="hasNameError()"
+      type="text"
+      [value]="examName()"
+      [placeholder]="t('create.examNamePlaceholder')"
+      (input)="updateExamName($event)"
+    />
+    @if (hasNameError()) {
+      <div class="invalid-feedback">{{ t('create.examNameRequired') }}</div>
+    }
+  </section>
+
+  <section class="create-exam__questions" aria-labelledby="questions-title">
+    <div class="create-exam__questions-header">
+      <div>
+        <h2 id="questions-title" class="h5 mb-1">{{ t('create.questionsTitle') }}</h2>
+        <p class="mb-0 text-secondary">{{ t('create.questionsBody') }}</p>
+      </div>
+
+      <button type="button" class="btn btn-outline-primary" (click)="addQuestion()">
+        {{ t('create.addQuestion') }}
+      </button>
+    </div>
+
+    @if (hasMinimumQuestionsError()) {
+      <div class="alert alert-danger mb-0">{{ t('create.minimumQuestionsRequired') }}</div>
+    }
+
+    <div class="create-exam__drafts">
+      @for (question of questions(); track $index) {
+        <app-question-draft
+          [draft]="question"
+          [index]="$index"
+          [exerciseTypes]="exerciseTypes"
+          [showValidation]="showQuestionTypeError(question)"
+          [canRemove]="true"
+          (draftChange)="updateQuestion($index, $event)"
+          (remove)="removeQuestion($index)"
+        />
+      }
+    </div>
+  </section>
+
+  @if (canGenerate()) {
+    <div class="create-exam__actions">
+      <button type="submit" class="btn btn-primary">{{ t('create.generateAction') }}</button>
+    </div>
+  }
+</form>

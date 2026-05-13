@@ -1,0 +1,47 @@
+.create-exam {
+  display: grid;
+  gap: 1rem;
+}
+
+.create-exam__header,
+.create-exam__panel,
+.create-exam__questions {
+  padding: 1rem;
+  border: 1px solid #dfe4ef;
+  border-radius: 0.5rem;
+  background: #ffffff;
+}
+
+.create-exam__eyebrow {
+  color: #315f9d;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.create-exam__questions {
+  display: grid;
+  gap: 1rem;
+}
+
+.create-exam__questions-header {
+  display: grid;
+  gap: 1rem;
+}
+
+.create-exam__drafts {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.create-exam__actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (min-width: 576px) {
+  .create-exam__questions-header {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: start;
+  }
+}
