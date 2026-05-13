@@ -17,6 +17,10 @@ export type TranslationKey =
   | 'exams.createAction'
   | 'exams.openExam'
   | 'exams.deleteExam'
+  | 'deleteModal.title'
+  | 'deleteModal.body'
+  | 'deleteModal.cancel'
+  | 'deleteModal.confirm'
   | 'create.eyebrow'
   | 'create.title'
   | 'create.body'
@@ -66,6 +70,10 @@ export const TRANSLATIONS: Record<LanguageCode, Record<TranslationKey, string>> 
     'exams.createAction': 'Crear examen',
     'exams.openExam': 'Abrir examen',
     'exams.deleteExam': 'Eliminar examen',
+    'deleteModal.title': 'Eliminar examen',
+    'deleteModal.body': '¿Seguro que quieres eliminar este examen? Esta acción no se puede deshacer.',
+    'deleteModal.cancel': 'Cancelar',
+    'deleteModal.confirm': 'Eliminar',
     'create.eyebrow': 'Nuevo examen',
     'create.title': 'Crear examen',
     'create.body': 'Configura las preguntas y genera un examen con ejercicios aleatorios.',
@@ -112,6 +120,10 @@ export const TRANSLATIONS: Record<LanguageCode, Record<TranslationKey, string>> 
     'exams.createAction': 'Create exam',
     'exams.openExam': 'Open exam',
     'exams.deleteExam': 'Delete exam',
+    'deleteModal.title': 'Delete exam',
+    'deleteModal.body': 'Are you sure you want to delete this exam? This action cannot be undone.',
+    'deleteModal.cancel': 'Cancel',
+    'deleteModal.confirm': 'Delete',
     'create.eyebrow': 'New exam',
     'create.title': 'Create exam',
     'create.body': 'Configure the questions and generate an exam with random exercises.',

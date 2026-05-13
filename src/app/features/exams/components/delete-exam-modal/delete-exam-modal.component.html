@@ -1,0 +1,23 @@
+<div class="modal-header">
+  <h2 class="modal-title h5">{{ t('deleteModal.title') }}</h2>
+  <button
+    type="button"
+    class="btn-close"
+    [attr.aria-label]="t('deleteModal.cancel')"
+    (click)="cancel()"
+  ></button>
+</div>
+
+<div class="modal-body">
+  <p class="fw-semibold mb-2">{{ examName() }}</p>
+  <p class="mb-0 text-secondary">{{ t('deleteModal.body') }}</p>
+</div>
+
+<div class="modal-footer">
+  <button type="button" class="btn btn-outline-secondary" (click)="cancel()">
+    {{ t('deleteModal.cancel') }}
+  </button>
+  <button type="button" class="btn btn-danger" (click)="confirm()">
+    {{ t('deleteModal.confirm') }}
+  </button>
+</div>
