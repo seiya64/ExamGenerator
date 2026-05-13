@@ -12,6 +12,8 @@ export type TranslationKey =
   | 'exams.placeholderTitle'
   | 'exams.placeholderBody'
   | 'exams.createAction'
+  | 'exams.openExam'
+  | 'exams.deleteExam'
   | 'exam.defaultQuestionName';
 
 export const DEFAULT_LANGUAGE: LanguageCode = 'es';
@@ -31,6 +33,8 @@ export const TRANSLATIONS: Record<LanguageCode, Record<TranslationKey, string>> 
     'exams.placeholderBody':
       'Esta pantalla mostrará los exámenes guardados cuando se implemente el listado completo.',
     'exams.createAction': 'Crear examen',
+    'exams.openExam': 'Abrir examen',
+    'exams.deleteExam': 'Eliminar examen',
     'exam.defaultQuestionName': 'Ejercicio',
   },
   en: {
@@ -47,6 +51,8 @@ export const TRANSLATIONS: Record<LanguageCode, Record<TranslationKey, string>> 
     'exams.placeholderBody':
       'This screen will show saved exams when the full list is implemented.',
     'exams.createAction': 'Create exam',
+    'exams.openExam': 'Open exam',
+    'exams.deleteExam': 'Delete exam',
     'exam.defaultQuestionName': 'Exercise',
   },
 };

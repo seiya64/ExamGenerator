@@ -1,0 +1,22 @@
+<article class="exam-card">
+  <button
+    type="button"
+    class="exam-card__main"
+    [attr.aria-label]="t('exams.openExam') + ': ' + exam().name"
+    (click)="open()"
+  >
+    <span class="exam-card__name">{{ exam().name }}</span>
+    <span class="exam-card__date">{{ formattedCreatedAt() }}</span>
+  </button>
+
+  <div class="exam-card__actions">
+    <button
+      type="button"
+      class="btn btn-outline-danger btn-sm"
+      [attr.aria-label]="t('exams.deleteExam') + ': ' + exam().name"
+      (click)="requestDelete($event)"
+    >
+      {{ t('exams.deleteExam') }}
+    </button>
+  </div>
+</article>

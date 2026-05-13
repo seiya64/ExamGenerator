@@ -1,0 +1,50 @@
+.exam-card {
+  display: grid;
+  gap: 0.75rem;
+  padding: 1rem;
+  border: 1px solid #dfe4ef;
+  border-radius: 0.5rem;
+  background: #ffffff;
+}
+
+.exam-card__main {
+  display: grid;
+  gap: 0.25rem;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+}
+
+.exam-card__main:hover .exam-card__name,
+.exam-card__main:focus-visible .exam-card__name {
+  color: #315f9d;
+}
+
+.exam-card__name {
+  overflow-wrap: anywhere;
+  font-weight: 700;
+}
+
+.exam-card__date {
+  color: #667085;
+  font-size: 0.9rem;
+}
+
+.exam-card__actions {
+  display: flex;
+  justify-content: flex-start;
+}
+
+@media (min-width: 576px) {
+  .exam-card {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+  }
+
+  .exam-card__actions {
+    justify-content: flex-end;
+  }
+}
