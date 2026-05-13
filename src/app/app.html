@@ -1,6 +1,17 @@
-<main class="app-start">
-  <h1>{{ title() }}</h1>
-  <p>Angular app scaffold ready.</p>
-</main>
+<header class="app-header border-bottom bg-white">
+  <div class="container app-container py-3">
+    <span class="app-brand">{{ title() }}</span>
+  </div>
+</header>
 
-<router-outlet />
+<main class="container app-container py-4 py-md-5">
+  <section class="status-panel" aria-labelledby="app-status-title">
+    <p class="status-eyebrow mb-2">Setup</p>
+    <h1 id="app-status-title" class="h3 mb-2">Exam Generator is ready</h1>
+    <p class="mb-0 text-secondary">
+      The Angular shell is running. Routes and exam screens will be added in the next tasks.
+    </p>
+  </section>
+
+  <router-outlet />
+</main>
