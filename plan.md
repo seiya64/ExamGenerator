@@ -29,9 +29,10 @@ The app will manage generated exams entirely in `localStorage`. Users can list e
 - Store exercise types in a constant JSON-style file:
   - `matrix`
   - `ecuations`
-  - `basic trigonometry`
-  - `polinomial function representation`
-  - `basic arithmetic`
+  - `basic_trigonometry`
+  - `polinomial_function_representation`
+  - `basic_arithmetic`
+- Use stable machine IDs with lowercase words separated by `_`; display labels can use normal spaces and accents.
 - Store a dummy exercise pool in a constant JSON-style file with 20 math exercises.
   - Each exercise has `id`, `type`, and bilingual text: `{ es, en }`.
   - Exercise types are distributed/randomized across the five configured types.

@@ -10,9 +10,10 @@ Add the constant JSON-style data source for exercise types.
 - Include these five types:
   - `matrix`
   - `ecuations`
-  - `basic trigonometry`
-  - `polinomial function representation`
-  - `basic arithmetic`
+  - `basic_trigonometry`
+  - `polinomial_function_representation`
+  - `basic_arithmetic`
+- Use lowercase machine IDs with `_` between words.
 - Store Spanish and English display labels for each type.
 - Do not wire the data into screens yet unless needed only to keep imports valid.
 
