@@ -12,7 +12,7 @@ export const EXERCISE_TYPES: readonly ExerciseType[] = [
     id: 'ecuations',
     label: {
       es: 'Ecuaciones',
-      en: 'Ecuations',
+      en: 'Equations',
     },
   },
   {
@@ -26,7 +26,7 @@ export const EXERCISE_TYPES: readonly ExerciseType[] = [
     id: 'polinomial_function_representation',
     label: {
       es: 'Representación de funciones polinómicas',
-      en: 'Polinomial function representation',
+      en: 'Polynomial function representation',
     },
   },
   {

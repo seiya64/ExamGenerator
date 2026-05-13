@@ -1,4 +1,6 @@
+import { ExerciseTypeId } from './exercise-type.model';
+
 export interface ExamDraftQuestion {
   readonly name: string;
-  readonly type: string;
+  readonly type: ExerciseTypeId | '';
 }
