@@ -8,9 +8,12 @@ export type TranslationKey =
   | 'shell.statusEyebrow'
   | 'shell.statusTitle'
   | 'shell.statusBody'
-  | 'exams.placeholderEyebrow'
-  | 'exams.placeholderTitle'
-  | 'exams.placeholderBody'
+  | 'exams.listEyebrow'
+  | 'exams.listTitle'
+  | 'exams.listBody'
+  | 'exams.emptyEyebrow'
+  | 'exams.emptyTitle'
+  | 'exams.emptyBody'
   | 'exams.createAction'
   | 'exams.openExam'
   | 'exams.deleteExam'
@@ -28,10 +31,12 @@ export const TRANSLATIONS: Record<LanguageCode, Record<TranslationKey, string>> 
     'shell.statusTitle': 'El generador de exámenes está listo',
     'shell.statusBody':
       'La estructura de Angular está funcionando. Las rutas y pantallas de exámenes se añadirán en las próximas tareas.',
-    'exams.placeholderEyebrow': 'Ruta /exams',
-    'exams.placeholderTitle': 'Listado de exámenes',
-    'exams.placeholderBody':
-      'Esta pantalla mostrará los exámenes guardados cuando se implemente el listado completo.',
+    'exams.listEyebrow': 'Exámenes',
+    'exams.listTitle': 'Exámenes guardados',
+    'exams.listBody': 'Consulta los exámenes que ya has generado en este navegador.',
+    'exams.emptyEyebrow': 'Sin exámenes',
+    'exams.emptyTitle': 'No hay exámenes todavía',
+    'exams.emptyBody': 'Cuando generes tu primer examen, aparecerá aquí con su fecha de creación.',
     'exams.createAction': 'Crear examen',
     'exams.openExam': 'Abrir examen',
     'exams.deleteExam': 'Eliminar examen',
@@ -46,10 +51,12 @@ export const TRANSLATIONS: Record<LanguageCode, Record<TranslationKey, string>> 
     'shell.statusTitle': 'Exam Generator is ready',
     'shell.statusBody':
       'The Angular shell is running. Routes and exam screens will be added in the next tasks.',
-    'exams.placeholderEyebrow': 'Route /exams',
-    'exams.placeholderTitle': 'Exams list',
-    'exams.placeholderBody':
-      'This screen will show saved exams when the full list is implemented.',
+    'exams.listEyebrow': 'Exams',
+    'exams.listTitle': 'Saved exams',
+    'exams.listBody': 'Review the exams you have already generated in this browser.',
+    'exams.emptyEyebrow': 'No exams',
+    'exams.emptyTitle': 'No exams yet',
+    'exams.emptyBody': 'Once you generate your first exam, it will appear here with its creation date.',
     'exams.createAction': 'Create exam',
     'exams.openExam': 'Open exam',
     'exams.deleteExam': 'Delete exam',

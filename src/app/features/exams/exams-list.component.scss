@@ -1,0 +1,24 @@
+.exams-list__header {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.exams-list__eyebrow {
+  color: #315f9d;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.exams-list__items {
+  display: grid;
+  gap: 0.75rem;
+}
+
+@media (min-width: 576px) {
+  .exams-list__header {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: start;
+  }
+}

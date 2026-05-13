@@ -1,10 +1,10 @@
 import { Routes } from '@angular/router';
-import { ExamsPlaceholderComponent } from './features/exams';
+import { ExamsListComponent } from './features/exams';
 
 export const routes: Routes = [
   {
     path: 'exams',
-    component: ExamsPlaceholderComponent,
+    component: ExamsListComponent,
   },
   {
     path: '',

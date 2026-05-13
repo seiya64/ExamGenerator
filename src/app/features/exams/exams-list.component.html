@@ -1,0 +1,29 @@
+<header class="exams-list__header">
+  <div>
+    <p class="exams-list__eyebrow mb-2">{{ t('exams.listEyebrow') }}</p>
+    <h1 class="h3 mb-2">{{ t('exams.listTitle') }}</h1>
+    <p class="mb-0 text-secondary">{{ t('exams.listBody') }}</p>
+  </div>
+
+  <button type="button" class="btn btn-primary" disabled>
+    {{ t('exams.createAction') }}
+  </button>
+</header>
+
+@if (exams().length === 0) {
+  <app-empty-state
+    [eyebrow]="t('exams.emptyEyebrow')"
+    [title]="t('exams.emptyTitle')"
+    [body]="t('exams.emptyBody')"
+  />
+} @else {
+  <div class="exams-list__items">
+    @for (exam of exams(); track exam.id) {
+      <app-exam-card
+        [exam]="exam"
+        (openExam)="openExam($event)"
+        (deleteExam)="requestDelete($event)"
+      />
+    }
+  </div>
+}
