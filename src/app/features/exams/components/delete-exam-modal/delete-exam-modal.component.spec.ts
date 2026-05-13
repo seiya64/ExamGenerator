@@ -55,6 +55,6 @@ describe('DeleteExamModalComponent', () => {
 
 function createComponent() {
   const fixture = TestBed.createComponent(DeleteExamModalComponent);
-  fixture.componentRef.setInput('examName', 'Final algebra');
+  fixture.componentInstance.examName = 'Final algebra';
   return fixture;
 }
