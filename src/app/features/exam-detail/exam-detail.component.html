@@ -1,0 +1,30 @@
+@if (exam; as currentExam) {
+  <article class="exam-detail">
+    <header class="exam-detail__header">
+      <div>
+        <p class="exam-detail__eyebrow mb-2">{{ t('detail.generatedAt') }}</p>
+        <h1 class="h3 mb-2">{{ currentExam.name }}</h1>
+        <p class="mb-0 text-secondary">{{ formattedCreatedAt(currentExam) }}</p>
+      </div>
+
+      <a class="btn btn-outline-primary" routerLink="/exams">
+        {{ t('detail.backToExams') }}
+      </a>
+    </header>
+
+    <div class="exam-detail__questions">
+      @for (question of currentExam.questions; track $index) {
+        <app-generated-question [question]="question" [index]="$index" />
+      }
+    </div>
+  </article>
+} @else {
+  <app-empty-state
+    [eyebrow]="t('detail.notFoundEyebrow')"
+    [title]="t('detail.notFoundTitle')"
+    [body]="t('detail.notFoundBody')"
+    [actionLabel]="t('detail.backToExams')"
+    (action)="backLink.click()"
+  />
+  <a #backLink class="visually-hidden" routerLink="/exams">{{ t('detail.backToExams') }}</a>
+}

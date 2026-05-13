@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 import { CreateExamComponent } from './features/create-exam';
-import { ExamDetailPlaceholderComponent } from './features/exam-detail';
+import { ExamDetailComponent } from './features/exam-detail';
 import { ExamsListComponent } from './features/exams';
 
 export const routes: Routes = [
@@ -10,7 +10,7 @@ export const routes: Routes = [
   },
   {
     path: 'exams/:id',
-    component: ExamDetailPlaceholderComponent,
+    component: ExamDetailComponent,
   },
   {
     path: 'exams',

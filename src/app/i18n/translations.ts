@@ -38,6 +38,11 @@ export type TranslationKey =
   | 'detail.placeholderBody'
   | 'detail.questionLabel'
   | 'detail.exerciseTypeLabel'
+  | 'detail.generatedAt'
+  | 'detail.backToExams'
+  | 'detail.notFoundEyebrow'
+  | 'detail.notFoundTitle'
+  | 'detail.notFoundBody'
   | 'exam.defaultQuestionName';
 
 export const DEFAULT_LANGUAGE: LanguageCode = 'es';
@@ -82,6 +87,11 @@ export const TRANSLATIONS: Record<LanguageCode, Record<TranslationKey, string>> 
     'detail.placeholderBody': 'Esta pantalla mostrará el examen generado en modo solo lectura.',
     'detail.questionLabel': 'Pregunta',
     'detail.exerciseTypeLabel': 'Tipo',
+    'detail.generatedAt': 'Generado',
+    'detail.backToExams': 'Volver a exámenes',
+    'detail.notFoundEyebrow': 'No encontrado',
+    'detail.notFoundTitle': 'No encontramos ese examen',
+    'detail.notFoundBody': 'Puede que se haya eliminado o que el enlace no sea correcto.',
     'exam.defaultQuestionName': 'Ejercicio',
   },
   en: {
@@ -123,6 +133,11 @@ export const TRANSLATIONS: Record<LanguageCode, Record<TranslationKey, string>> 
     'detail.placeholderBody': 'This screen will show the generated exam in read-only mode.',
     'detail.questionLabel': 'Question',
     'detail.exerciseTypeLabel': 'Type',
+    'detail.generatedAt': 'Generated',
+    'detail.backToExams': 'Back to exams',
+    'detail.notFoundEyebrow': 'Not found',
+    'detail.notFoundTitle': 'We could not find that exam',
+    'detail.notFoundBody': 'It may have been deleted, or the link may not be correct.',
     'exam.defaultQuestionName': 'Exercise',
   },
 };
