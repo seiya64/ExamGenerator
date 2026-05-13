@@ -1,6 +1,6 @@
 .exam-detail {
   display: grid;
-  gap: 1rem;
+  gap: 1.25rem;
 }
 
 .exam-detail__header {
@@ -10,6 +10,7 @@
   border: 1px solid #dfe4ef;
   border-radius: 0.5rem;
   background: #ffffff;
+  box-shadow: 0 0.5rem 1.5rem rgba(31, 42, 68, 0.04);
 }
 
 .exam-detail__eyebrow {
@@ -21,7 +22,7 @@
 
 .exam-detail__questions {
   display: grid;
-  gap: 0.75rem;
+  gap: 1rem;
 }
 
 @media (min-width: 576px) {

@@ -1,15 +1,16 @@
 .create-exam {
   display: grid;
-  gap: 1rem;
+  gap: 1.25rem;
 }
 
 .create-exam__header,
 .create-exam__panel,
 .create-exam__questions {
-  padding: 1rem;
+  padding: 1.25rem;
   border: 1px solid #dfe4ef;
   border-radius: 0.5rem;
   background: #ffffff;
+  box-shadow: 0 0.5rem 1.5rem rgba(31, 42, 68, 0.04);
 }
 
 .create-exam__eyebrow {
@@ -36,12 +37,24 @@
 
 .create-exam__actions {
   display: flex;
-  justify-content: flex-end;
+  justify-content: stretch;
+}
+
+.create-exam__actions .btn {
+  width: 100%;
 }
 
 @media (min-width: 576px) {
   .create-exam__questions-header {
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: start;
+  }
+
+  .create-exam__actions {
+    justify-content: flex-end;
+  }
+
+  .create-exam__actions .btn {
+    width: auto;
   }
 }

@@ -1,20 +1,19 @@
 import { Routes } from '@angular/router';
-import { CreateExamComponent } from './features/create-exam';
-import { ExamDetailComponent } from './features/exam-detail';
-import { ExamsListComponent } from './features/exams';
 
 export const routes: Routes = [
   {
     path: 'exams/new',
-    component: CreateExamComponent,
+    loadComponent: () =>
+      import('./features/create-exam').then((module) => module.CreateExamComponent),
   },
   {
     path: 'exams/:id',
-    component: ExamDetailComponent,
+    loadComponent: () =>
+      import('./features/exam-detail').then((module) => module.ExamDetailComponent),
   },
   {
     path: 'exams',
-    component: ExamsListComponent,
+    loadComponent: () => import('./features/exams').then((module) => module.ExamsListComponent),
   },
   {
     path: '',
