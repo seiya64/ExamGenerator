@@ -1,5 +1,5 @@
 import { Component, inject, signal } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { TranslationService, TranslationKey } from '../../i18n';
 import { GeneratedExam } from '../../models';
 import { ExamStorageService } from '../../services';
@@ -14,12 +14,13 @@ import { ExamCardComponent } from './components/exam-card/exam-card.component';
 })
 export class ExamsListComponent {
   private readonly examStorageService = inject(ExamStorageService);
+  private readonly router = inject(Router);
   private readonly translationService = inject(TranslationService);
 
   protected readonly exams = signal<readonly GeneratedExam[]>(this.examStorageService.loadAll());
 
-  protected openExam(_exam: GeneratedExam): void {
-    // Detail navigation is added once the /exams/:id route exists.
+  protected openExam(exam: GeneratedExam): void {
+    void this.router.navigateByUrl(`/exams/${exam.id}`);
   }
 
   protected requestDelete(_exam: GeneratedExam): void {

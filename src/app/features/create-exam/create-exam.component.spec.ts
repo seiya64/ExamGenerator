@@ -61,8 +61,9 @@ describe('CreateExamComponent', () => {
     clickButtonContaining(fixture.nativeElement, 'Generar examen');
     fixture.detectChanges();
 
-    expect(TestBed.inject(ExamStorageService).loadAll()).toHaveLength(1);
-    expect(navigateSpy).toHaveBeenCalledWith('/exams');
+    const savedExam = TestBed.inject(ExamStorageService).loadAll()[0];
+    expect(savedExam).toBeDefined();
+    expect(navigateSpy).toHaveBeenCalledWith(`/exams/${savedExam?.id}`);
   });
 });
 

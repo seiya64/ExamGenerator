@@ -33,6 +33,9 @@ export type TranslationKey =
   | 'create.questionTypePlaceholder'
   | 'create.questionTypeRequired'
   | 'create.removeQuestion'
+  | 'detail.placeholderEyebrow'
+  | 'detail.placeholderTitle'
+  | 'detail.placeholderBody'
   | 'exam.defaultQuestionName';
 
 export const DEFAULT_LANGUAGE: LanguageCode = 'es';
@@ -72,6 +75,9 @@ export const TRANSLATIONS: Record<LanguageCode, Record<TranslationKey, string>> 
     'create.questionTypePlaceholder': 'Selecciona un tipo',
     'create.questionTypeRequired': 'Selecciona un tipo de ejercicio.',
     'create.removeQuestion': 'Eliminar pregunta',
+    'detail.placeholderEyebrow': 'Ruta /exams/:id',
+    'detail.placeholderTitle': 'Detalle del examen',
+    'detail.placeholderBody': 'Esta pantalla mostrará el examen generado en modo solo lectura.',
     'exam.defaultQuestionName': 'Ejercicio',
   },
   en: {
@@ -108,6 +114,9 @@ export const TRANSLATIONS: Record<LanguageCode, Record<TranslationKey, string>> 
     'create.questionTypePlaceholder': 'Select a type',
     'create.questionTypeRequired': 'Select an exercise type.',
     'create.removeQuestion': 'Remove question',
+    'detail.placeholderEyebrow': 'Route /exams/:id',
+    'detail.placeholderTitle': 'Exam detail',
+    'detail.placeholderBody': 'This screen will show the generated exam in read-only mode.',
     'exam.defaultQuestionName': 'Exercise',
   },
 };

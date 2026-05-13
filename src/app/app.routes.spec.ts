@@ -5,8 +5,12 @@ describe('routes', () => {
     expect(routes.some((route) => route.path === 'exams' && route.component)).toBe(true);
   });
 
-  it('should route /exams/new to the create placeholder', () => {
+  it('should route /exams/new to the create screen', () => {
     expect(routes.some((route) => route.path === 'exams/new' && route.component)).toBe(true);
+  });
+
+  it('should route /exams/:id to the detail placeholder', () => {
+    expect(routes.some((route) => route.path === 'exams/:id' && route.component)).toBe(true);
   });
 
   it('should redirect empty and unknown paths to /exams', () => {

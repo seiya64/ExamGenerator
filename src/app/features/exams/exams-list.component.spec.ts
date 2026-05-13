@@ -1,5 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { provideRouter } from '@angular/router';
+import { Router } from '@angular/router';
 import { GeneratedExam } from '../../models';
 import { ExamStorageService } from '../../services';
 import { ExamsListComponent } from './exams-list.component';
@@ -34,6 +35,18 @@ describe('ExamsListComponent', () => {
     expect(compiled.textContent).toContain('Final algebra');
     expect(compiled.textContent).toContain('1 de mayo de 2026 10:26');
     expect(compiled.querySelector('app-exam-card')).not.toBeNull();
+  });
+
+  it('should navigate to detail when opening an exam card', () => {
+    TestBed.inject(ExamStorageService).save(createExam());
+    const fixture = TestBed.createComponent(ExamsListComponent);
+    const router = TestBed.inject(Router);
+    const navigateSpy = vi.spyOn(router, 'navigateByUrl').mockResolvedValue(true);
+
+    fixture.detectChanges();
+    fixture.nativeElement.querySelector('app-exam-card button').click();
+
+    expect(navigateSpy).toHaveBeenCalledWith('/exams/exam_1');
   });
 });
 

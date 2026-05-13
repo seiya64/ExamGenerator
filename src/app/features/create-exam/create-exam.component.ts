@@ -70,7 +70,7 @@ export class CreateExamComponent {
 
     const exam = this.examGeneratorService.generate(this.examName(), this.questions());
     this.examStorageService.save(exam);
-    void this.router.navigateByUrl('/exams');
+    void this.router.navigateByUrl(`/exams/${exam.id}`);
   }
 
   protected submit(event: SubmitEvent): void {
