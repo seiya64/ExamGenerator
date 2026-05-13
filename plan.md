@@ -9,6 +9,7 @@ The app will manage generated exams entirely in `localStorage`. Users can list e
 ## Key Changes
 
 - Scaffold a standalone Angular app with routing, SCSS, Bootstrap styles, and Bootstrap-compatible Angular components.
+- Build shared UI components separately from route behavior so screens stay small and reusable.
 - Add routes:
   - `/exams`: saved exams list, default route.
   - `/exams/new`: create exam screen.

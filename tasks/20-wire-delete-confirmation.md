@@ -1,14 +1,14 @@
-# Task 15: Add Delete Confirmation
+# Task 20: Wire Delete Confirmation
 
 ## Goal
 
-Add safe exam deletion from the exam list.
+Wire the reusable confirmation modal into safe exam deletion from the exam list.
 
 ## Implementation
 
 - Add a delete button to each exam card.
 - Prevent the delete button click from triggering card navigation.
-- Open a Bootstrap confirmation modal before deleting.
+- Open the `DeleteExamModalComponent` before deleting.
 - Confirmation modal text must be translated.
 - On confirm:
   - Delete the exam from localStorage through the storage service.
@@ -22,8 +22,9 @@ Add safe exam deletion from the exam list.
 - Canceling the modal does not delete the exam.
 - Confirming the modal deletes only the selected exam.
 - The list updates immediately after deletion.
+- Delete behavior uses the reusable delete confirmation component.
 - `npm run build` passes.
 
 ## Suggested Commit
 
-`feat: add exam delete confirmation`
+`feat: wire exam delete confirmation`

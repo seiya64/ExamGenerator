@@ -1,4 +1,4 @@
-# Task 16: Responsive Visual Polish
+# Task 21: Responsive Visual Polish
 
 ## Goal
 

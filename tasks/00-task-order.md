@@ -17,17 +17,22 @@ Use these tasks in numeric order. Each task is designed to leave the app buildab
 4. `04-add-exercise-types-data.md`
 5. `05-add-dummy-exercises-data.md`
 6. `06-add-runtime-i18n.md`
-7. `07-add-exam-storage-service.md`
-8. `08-add-exam-generator-service.md`
-9. `09-add-exams-route-placeholder.md`
-10. `10-implement-exams-list-screen.md`
-11. `11-add-create-exam-route-placeholder.md`
-12. `12-implement-create-exam-screen.md`
-13. `13-add-exam-detail-route-placeholder.md`
-14. `14-implement-exam-detail-screen.md`
-15. `15-add-delete-confirmation.md`
-16. `16-responsive-visual-polish.md`
-17. `17-add-focused-tests.md`
+7. `07-add-shared-ui-components.md`
+8. `08-add-exam-storage-service.md`
+9. `09-add-exam-generator-service.md`
+10. `10-add-exams-route-placeholder.md`
+11. `11-add-exams-list-ui-components.md`
+12. `12-implement-exams-list-screen.md`
+13. `13-add-create-exam-route-placeholder.md`
+14. `14-add-create-exam-ui-components.md`
+15. `15-implement-create-exam-screen.md`
+16. `16-add-exam-detail-route-placeholder.md`
+17. `17-add-exam-detail-ui-components.md`
+18. `18-implement-exam-detail-screen.md`
+19. `19-add-delete-confirmation-component.md`
+20. `20-wire-delete-confirmation.md`
+21. `21-responsive-visual-polish.md`
+22. `22-add-focused-tests.md`
 
 ## Global Rule
 
