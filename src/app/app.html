@@ -1,15 +1,38 @@
 <header class="app-header border-bottom bg-white">
   <div class="container app-container py-3">
-    <span class="app-brand">{{ title() }}</span>
+    <div class="app-header-inner">
+      <span class="app-brand">{{ t('app.title') }}</span>
+
+      <div class="language-switcher" role="group" [attr.aria-label]="t('shell.languageLabel')">
+        <button
+          type="button"
+          class="btn btn-sm"
+          [class.btn-primary]="language() === 'es'"
+          [class.btn-outline-primary]="language() !== 'es'"
+          (click)="setLanguage('es')"
+        >
+          {{ t('shell.spanish') }}
+        </button>
+        <button
+          type="button"
+          class="btn btn-sm"
+          [class.btn-primary]="language() === 'en'"
+          [class.btn-outline-primary]="language() !== 'en'"
+          (click)="setLanguage('en')"
+        >
+          {{ t('shell.english') }}
+        </button>
+      </div>
+    </div>
   </div>
 </header>
 
 <main class="container app-container py-4 py-md-5">
   <section class="status-panel" aria-labelledby="app-status-title">
-    <p class="status-eyebrow mb-2">Setup</p>
-    <h1 id="app-status-title" class="h3 mb-2">Exam Generator is ready</h1>
+    <p class="status-eyebrow mb-2">{{ t('shell.statusEyebrow') }}</p>
+    <h1 id="app-status-title" class="h3 mb-2">{{ t('shell.statusTitle') }}</h1>
     <p class="mb-0 text-secondary">
-      The Angular shell is running. Routes and exam screens will be added in the next tasks.
+      {{ t('shell.statusBody') }}
     </p>
   </section>
 

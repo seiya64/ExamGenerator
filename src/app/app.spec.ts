@@ -3,6 +3,8 @@ import { App } from './app';
 
 describe('App', () => {
   beforeEach(async () => {
+    localStorage.clear();
+
     await TestBed.configureTestingModule({
       imports: [App],
     }).compileComponents();
@@ -18,6 +20,21 @@ describe('App', () => {
     const fixture = TestBed.createComponent(App);
     await fixture.whenStable();
     const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('.app-brand')?.textContent).toContain('Generador de exámenes');
+  });
+
+  it('should switch visible text to English', async () => {
+    const fixture = TestBed.createComponent(App);
+    await fixture.whenStable();
+
+    const compiled = fixture.nativeElement as HTMLElement;
+    const englishButton = Array.from(compiled.querySelectorAll('button')).find((button) =>
+      button.textContent?.includes('Inglés'),
+    );
+
+    englishButton?.click();
+    fixture.detectChanges();
+
     expect(compiled.querySelector('.app-brand')?.textContent).toContain('Exam Generator');
   });
 });
